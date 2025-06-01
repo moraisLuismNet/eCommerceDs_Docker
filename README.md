@@ -5,7 +5,7 @@
 ![eCommerceDs_Docker](img/UML.png)
 
 eComerceDs/    
-├── eComerceDs/
+├── eComerceDs/  
 │   ├── AutoMappers/  
 │   │   └── MappingProfile.cs  
 │   ├── Classes/  
