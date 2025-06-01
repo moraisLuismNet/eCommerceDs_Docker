@@ -4,24 +4,24 @@
 
 ![eCommerceDs_Docker](img/UML.png)
 
-eComerceDs_Docker/    
-├── eComerceDs/  
-│   ├── AutoMappers/  
-│   │   └── MappingProfile.cs  
-│   ├── Classes/  
-│   │   └── HashResult.cs  
-│   ├── Controllers/  
-│   │   ├── AuthController.cs  
-│   │   ├── CartDetailsController.cs  
-│   │   ├── CartsController.cs  
-│   │   ├── GroupsController.cs  
-│   │   ├── MusicGenresController.cs  
-│   │   ├── OrdersController.cs  
-│   │   ├── RecordsController.cs  
-│   │   └── UsersController.cs  
-│   ├── DTOs/  
-│   │   ├── CartDetailDTO.cs  
-│   │   ├── CartDetailInfoDTO.cs  
+eComerceDs_Docker/      
+├── eComerceDs/    
+│   ├── AutoMappers/    
+│   │   └── MappingProfile.cs    
+│   ├── Classes/    
+│   │   └── HashResult.cs    
+│   ├── Controllers/    
+│   │   ├── AuthController.cs    
+│   │   ├── CartDetailsController.cs    
+│   │   ├── CartsController.cs    
+│   │   ├── GroupsController.cs    
+│   │   ├── MusicGenresController.cs    
+│   │   ├── OrdersController.cs    
+│   │   ├── RecordsController.cs    
+│   │   └── UsersController.cs    
+│   ├── DTOs/    
+│   │   ├── CartDetailDTO.cs    
+│   │   ├── CartDetailInfoDTO.cs    
 │   │   ├── CartDTO.cs  
 │   │   ├── CartStatusDTO.cs  
 │   │   ├── ChangePasswordDTO.cs  
