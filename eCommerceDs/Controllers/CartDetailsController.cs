@@ -136,25 +136,24 @@ namespace eCommerceDs.Controllers
             {
                 return NotFound(new { message = "Record not found" });
             }
-
-            // Check available stock
-            // if (record.Stock < amount)
-            // {
-                // return BadRequest(new { message = $"Not enough stock. Available: {record.Stock}, Requested: {amount}" });
-            // }
-						
-						if (record.Stock < amount)
-						{
-							return BadRequest(new { 
-								message = $"Not enough stock. Available: {record.Stock}, Requested: {amount}",
-								code = "INSUFFICIENT_STOCK"
-							});
-						}
+		
+			if (record.Stock < amount)
+			{
+				return BadRequest(new { 
+					message = $"Not enough stock. Available: {record.Stock}, Requested: {amount}",
+					code = "INSUFFICIENT_STOCK"
+				});
+			}
 
             var cart = await _cartService.GetCartByEmailCartService(email);
             if (cart == null)
             {
                 return NotFound(new { message = "Cart not found" });
+            }
+
+            if (!cart.Enabled)
+            {
+                return BadRequest(new { message = "Cannot add items to a disabled cart" });
             }
 
             // Update stock before adding to cart
