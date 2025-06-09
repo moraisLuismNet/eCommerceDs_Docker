@@ -72,6 +72,7 @@ namespace eCommerceDs.Controllers
             try
             {
                 var disabledCarts = await _cartService.GetDisabledCartsCartService();
+
                 return Ok(disabledCarts);
             }
             catch (Exception ex)
@@ -88,6 +89,7 @@ namespace eCommerceDs.Controllers
             try
             {
                 var disabledCart = await _cartService.DisableCartCartService(email);
+
                 return Ok(new
                 {
                     message = $"Cart with UserEmail {email} has been disabled",
@@ -112,6 +114,7 @@ namespace eCommerceDs.Controllers
             try
             {
                 var enabledCart = await _cartService.EnableCartCartService(email);
+
                 return Ok(new
                 {
                     message = $"Cart with UserEmail {email} has been enabled",

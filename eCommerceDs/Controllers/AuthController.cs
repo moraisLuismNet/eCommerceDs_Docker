@@ -35,13 +35,9 @@ namespace eCommerceDs.Controllers
                 return BadRequest(_userService.Errors);
             }
 
-            // userInsertDTO.Role = string.IsNullOrWhiteSpace(userInsertDTO.Role) || userInsertDTO.Role.Trim().ToLower() == "string"
-                // ? "User"
-                // : userInsertDTO.Role.Trim();
-								
-						userInsertDTO.Role = (userInsertDTO.Role?.Trim().ToLower() == "admin") 
-							? "Admin" 
-							: "User";
+            userInsertDTO.Role = string.IsNullOrWhiteSpace(userInsertDTO.Role) || userInsertDTO.Role.Trim().ToLower() == "string"
+                ? "User"
+                : userInsertDTO.Role.Trim();
 
             var allowedRoles = new List<string> { "User", "Admin" };
             if (!allowedRoles.Contains(userInsertDTO.Role))
@@ -66,7 +62,7 @@ namespace eCommerceDs.Controllers
 
             userDTO.CartId = cart.IdCart;
 
-            return Ok(userDTO);
+            return Ok(userInsertDTO);
         }
 
 
@@ -87,6 +83,7 @@ namespace eCommerceDs.Controllers
             }
 
             var tokenResponse = _tokenService.GenerateTokenService(user);
+
             return Ok(tokenResponse);
         }
 

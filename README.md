@@ -27,11 +27,13 @@ eComerceDs_Docker/
 │   │   ├── ChangePasswordDTO.cs  
 │   │   ├── GroupDTO.cs  
 │   │   ├── GroupInsertDTO.cs  
+│   │   ├── GroupItemDTO.cs 
 │   │   ├── GroupRecordsDTO.cs  
 │   │   ├── GroupUpdateDTO.cs  
 │   │   ├── LoginResponseDTO.cs  
 │   │   ├── MusicGenreDTO.cs  
-│   │   ├── MusicGenreInsertDTO.cs  
+│   │   ├── MusicGenreInsertDTO.cs 
+│   │   ├── MusicGenreItemDTO.cs  
 │   │   ├── MusicGenreTotalGroupsDTO.cs  
 │   │   ├── MusicGenreUpdateDTO.cs  
 │   │   ├── OrderDetailDTO.cs  
@@ -39,6 +41,7 @@ eComerceDs_Docker/
 │   │   ├── RecordDTO.cs  
 │   │   ├── RecordInsertDTO.cs  
 │   │   ├── RecordItemDTO.cs  
+│   │   ├── RecordItemExtDTO.cs  
 │   │   ├── RecordUpdateDTO.cs  
 │   │   ├── UserDTO.cs  
 │   │   ├── UserInsertDTO.cs  
@@ -99,8 +102,7 @@ eComerceDs_Docker/
 │   │   ├── MusicGenreUpdateValidator.cs  
 │   │   ├── RecordInsertValidator.cs  
 │   │   ├── RecordUpdateValidator.cs  
-│   │   └── WeightFileValidator.cs  
-│   ├──appsettings.Development.json   
+│   │   └── WeightFileValidator.cs     
 │   ├── appsettings.json  
 │   ├── Dockerfile  
 │   └── Program.cs  

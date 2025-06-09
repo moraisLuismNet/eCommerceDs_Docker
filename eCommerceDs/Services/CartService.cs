@@ -23,6 +23,7 @@ public class CartService : ICartService
     public async Task<IEnumerable<CartDTO>> GetAllCartsCartService()
     {
         var carts = await _cartRepository.GetAllCartsCartRepository();
+
         return carts.Select(x => new CartDTO
         {
             IdCart = x.IdCart,
@@ -74,6 +75,7 @@ public class CartService : ICartService
         };
 
         await _cartRepository.AddCartCartRepository(cart);
+
         return cart;
     }
 

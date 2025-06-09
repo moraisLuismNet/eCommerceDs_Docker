@@ -2,7 +2,6 @@
 using eCommerceDs.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.Security.Claims;
 
 namespace eCommerceDs.Controllers
 {
@@ -136,14 +135,12 @@ namespace eCommerceDs.Controllers
             {
                 return NotFound(new { message = "Record not found" });
             }
-		
-			if (record.Stock < amount)
-			{
-				return BadRequest(new { 
-					message = $"Not enough stock. Available: {record.Stock}, Requested: {amount}",
-					code = "INSUFFICIENT_STOCK"
-				});
-			}
+
+            // Check available stock
+            if (record.Stock < amount)
+            {
+                return BadRequest(new { message = $"Not enough stock. Available: {record.Stock}, Requested: {amount}" });
+            }
 
             var cart = await _cartService.GetCartByEmailCartService(email);
             if (cart == null)
@@ -189,6 +186,7 @@ namespace eCommerceDs.Controllers
                 updatedStock = record.Stock
             });
         }
+
 
         [Authorize]
         [HttpPost("removeFromCartDetailAndCart/{email}")]
