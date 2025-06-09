@@ -27,12 +27,12 @@ eComerceDs_Docker/
 │   │   ├── ChangePasswordDTO.cs  
 │   │   ├── GroupDTO.cs  
 │   │   ├── GroupInsertDTO.cs  
-│   │   ├── GroupItemDTO.cs 
+│   │   ├── GroupItemDTO.cs   
 │   │   ├── GroupRecordsDTO.cs  
 │   │   ├── GroupUpdateDTO.cs  
 │   │   ├── LoginResponseDTO.cs  
 │   │   ├── MusicGenreDTO.cs  
-│   │   ├── MusicGenreInsertDTO.cs 
+│   │   ├── MusicGenreInsertDTO.cs   
 │   │   ├── MusicGenreItemDTO.cs  
 │   │   ├── MusicGenreTotalGroupsDTO.cs  
 │   │   ├── MusicGenreUpdateDTO.cs  
