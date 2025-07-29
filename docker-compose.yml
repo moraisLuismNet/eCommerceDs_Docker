@@ -1,4 +1,4 @@
-version: "3.8"
+version: '3.8'
 
 services:
   ecommerceds:
@@ -13,8 +13,7 @@ services:
       - ASPNETCORE_URLS=http://+:80
     restart: unless-stopped
     depends_on:
-      ecommerce-db:
-        condition: service_healthy
+      - ecommerce-db
 
   ecommerce-db:
     image: mcr.microsoft.com/mssql/server:2022-latest
@@ -27,12 +26,6 @@ services:
     volumes:
       - ./.containers/database:/var/opt/mssql/data
     restart: unless-stopped
-    healthcheck:
-      test: ["CMD-SHELL", "pidof sqlservr || exit 1"]
-      interval: 20s
-      timeout: 10s
-      retries: 10
-      start_period: 120s
 
 volumes:
   sql_data:
